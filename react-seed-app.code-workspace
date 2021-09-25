@@ -1,0 +1,40 @@
+{
+    "folders": [
+      {
+        "path": "."
+      },
+    ],
+    "extensions": {
+      "recommendations": [
+        // test
+        "orta.vscode-jest",
+        // Host actions
+        "formulahendry.github-actions",
+        // Visual
+        "vscode-icons-team.vscode-icons",
+        "streetsidesoftware.code-spell-checker",
+        // linting
+        "dbaeumer.vscode-eslint",
+        "ghmcadams.lintlens",
+        // git
+        "eamodio.gitlens",
+        "mhutchie.git-graph"
+      ]
+    },
+    "settings": {
+        "launch": {
+            // Global debug configuration for every developer in the team.
+            "configurations": [
+              {
+                "name": "Debug Jest Tests",
+                "type": "node",
+                "request": "launch",
+                "runtimeArgs": ["--inspect-brk", "${workspaceRoot}/node_modules/.bin/jest", "--runInBand", "--coverage", "false"],
+                "console": "integratedTerminal",
+                "internalConsoleOptions": "neverOpen"
+              }
+            ],
+            "compounds": []
+        }
+    }
+  }
